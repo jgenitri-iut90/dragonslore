@@ -1,0 +1,305 @@
+@font-face {
+  font-family: 'Public-Sans-Title';
+  src: url(PublicSans.ttf);
+}
+
+@font-face {
+  font-family: 'Public-Sans-Text';
+  src: url(PublicSans-Thin.ttf);
+}
+
+* {box-sizing:border-box}
+
+/* Bouton */
+.container{
+  text-align: center;
+  margin-top: 10px;
+}
+
+.container a {
+  text-decoration: none;
+}
+
+.btn{
+  border: 1px solid black;
+  background: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "montserrat";
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn1{
+  color: black;
+}
+
+.btn1:hover{
+  color: #fff;
+}
+
+.btn::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: black;
+  z-index: -1;
+  transition: 0.8s;
+}
+
+.btn1::before{
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+
+
+.btn1:hover::before{
+  height: 100%;
+}
+
+
+/* Gros Titre*/
+.container-top{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.Titre-top {
+  text-align: center;
+  font-family: Public-Sans-Title;
+  font-size: 20px;
+}
+
+.Texte-top {
+  font-family: Public-Sans-Text;
+  font-size: 20px;
+}
+
+.text-haut {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+/* Taille du slideshow */
+.slideshow {
+  padding-top: 50px;
+  padding-left: 20%;
+  width: 80%;
+  position: relative;
+}
+
+/* Cache les images */
+.Slide {
+  display: none;
+}
+
+
+/* Transition d'image */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
+
+/* partenaire */
+.titre {
+    text-align: center;
+    font-family: Public-Sans-Title;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.partenaire {
+    width: 80%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-left: 20%;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+.text {
+    font-size: 20px;
+    font-family: Public-Sans-Text;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*Bouton*/
+
+.btn2 {
+  visibility: hidden;
+}
+
+/*Responsive*/
+
+@media (max-width : 1071px) {
+  .logo img {
+    max-width: 125px;
+  }
+
+  .Titre-top {
+    font-size: 18px;
+  }
+  
+  .Texte-top {
+    font-size: 18px;
+  }
+  
+}
+
+@media (max-width : 940px) {
+  .logo img {
+    max-width: 100px;
+  }
+
+  .Titre-top {
+    font-size: 16px;
+  }
+  
+  .Texte-top {
+    font-size: 16px;
+  }
+  
+  .titre {
+    text-align: center;
+    font-family: Public-Sans-Title;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+}
+
+@media (max-width : 772px) {
+  .btn2 {
+    visibility:  visible;
+  }
+  .logo img {
+    max-width: 150px;
+  }
+
+  .Titre-top {
+    font-size: 14px;
+  }
+
+  .partenaire {
+    width: 80%;
+    margin-left: 2%;
+    position: relative;
+    display: grid;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-left: 20%;
+    grid-template-columns: 40% 40%;
+    grid-gap: 20px;
+
+  }
+
+  .text {
+    font-size: 20px;
+    font-family: Public-Sans-Text;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .titre {
+    text-align: center;
+    font-family: Public-Sans-Title;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+}
+
+@media (max-width : 679px) {
+  .logo img {
+    max-width: 150px;
+    }
+
+  .Titre-top {
+    font-size: 14px;
+  }
+
+  .partenaire {
+    width: 80%;
+    margin-left: 2%;
+    position: relative;
+    display: grid;
+    justify-content: center;
+    margin-top: 20px;
+    padding-left: 20%;
+    grid-template-columns: 51;
+    grid-gap: 20px;
+
+  }
+
+  .text {
+    font-size: 20px;
+    font-family: Public-Sans-Text;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .titre {
+    text-align: center;
+    font-family: Public-Sans-Title;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+}
+
+@media (max-width : 600px) {
+  .logo img {
+    max-width: 200px;
+    padding-bottom: 40px;
+    }
+
+  .Titre-top {
+    font-size: 14px;
+  }
+
+  .partenaire {
+    width: 80%;
+    position: relative;
+    display: block;
+    justify-content: center;
+    margin-top: 20px;
+
+  }
+
+  .text {
+    display: none;
+  }
+
+  .titre {
+    text-align: center;
+    font-family: Public-Sans-Title;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+}
