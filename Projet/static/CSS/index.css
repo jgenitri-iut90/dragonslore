@@ -33,6 +33,7 @@
   overflow: hidden;
 }
 
+/* Transition bouton passe en noir lorsqu'on passe dessus */
 .btn1{
   color: black;
 }
